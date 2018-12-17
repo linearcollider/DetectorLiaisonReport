@@ -115,7 +115,7 @@ The main differences and improvements are listed below.
 \item{FLAME is a System on Chip (SoC) solution comprising all functionality
   (analog front--end, ADC, data serialization and transmission) in one ASIC.
   It will simplify the architecture of the overall readout system and minimise the number of its components.}
-\item{FLAME ASICs comprise 32-channels. Designing a readout board with 8 ASICs one can build a detector module
+\item{FLAME ASICs comprises 32-channels. Designing a readout board with 8 ASICs one can build a detector module
   reading the whole LumiCal sensor tile, containing 256 channels. }
 \item{FLAME is built of two identical 16-channel blocks. The data from each block is sent out
   by a very fast (5.2 {Gbps}) serializer and serial data transmission block. The output data is coded and formatted so that it may be directly received by fast FPGA links.}
@@ -296,7 +296,7 @@ The bonding machine was tuned to make the loop as low as possible and technicall
 The sampling based measurements, which were done using a con-focal laser scanning microscope, show that the loop
 height is in the range from 50~$\mu$m to~100~$\mu$m. The total thickness of the sensor plane was 650 $\mu$m.
 
-The calorimeter prototype was studied in a 1 to 5 GeV electron beam at DESY. The shower position was reconstructed with a resolution of (440$\pm$20)$\mu$m.
+The calorimeter prototype was studied in a 1 to 5 GeV electron beam at DESY~\cite{Ghenescu:2018sow}. The shower position was reconstructed with a resolution of (440$\pm$20)$\mu$m.
 The average transverse shower profile is shown in 
 Figure~\ref{MR_5GeV} for data and Monte Carlo simulation. Very good agreement is found. The effective Moli\`ere radius is
 determined to be 8.1$\pm$0.3 mm in data and 8.4$\pm$0.1 mm in Monte Carlo simulations.
@@ -319,7 +319,7 @@ Engineering challenges within the current and future research of FCAL are the fo
 manufactured and used in test-beam measurements.
 These technologies need to be completed and transferred into mass production. 
 }
-\item{Multichannel front-end and ADC ASICs for the technological calorimeter prototype.
+\item{Development of readout ASICs for LumiCal (FLAME) and BeamCal.
 A compromise must be found between integration, miniaturization and costs}.
 \item{Operation using power pulsing to avoid active cooling}.
 \item{A dedicated solution for data concentration, data reduction and transmission, allowing read out of 
@@ -351,7 +351,7 @@ are essential firstly to develop and test engineering solutions to build a very 
 secondly to verify the results of Monte Carlo studies. Depending on the test beam
 results the calorimeter may be redesigned.
 For the prototype calorimeter
-a mechanical structure, a sufficient amount of front-end and ADC ASICs, FPGAs for
+a mechanical structure, a sufficient amount of ASICs, FPGAs for
 data concentration and
 a data acquisition system are needed. In addition, 
 two-planes of a pixel tracker in front of LumiCal will be prepared to improve the polar angle resolution.
