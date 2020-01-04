@@ -1,6 +1,6 @@
 \section{Electronics, DAQ and Cooling}
 \label{chap:TPC_sec:electronics}
-Most recent update: 2018-06-04 \\
+Most recent update: 2020-01-03 \\
 Contact person: Leif J{\"o}nsson (email: leif.jonsson@hep.lu.se)
 
 \subsection{Introduction}
@@ -27,10 +27,20 @@ Cooling of the front end electronics is a challenge since the size of the coolin
 is \SI{3203}{mW} on the top side and \SI{3028}{mW} on the bottom side. In power pulsing mode, with a bunch train of \SI{725}{\micro s}, containing 1312 bunches, the power dissipation is reduced to about \SI{223}{mW} per MCM-board on the top side and \SI{48}{mW} on the bottom side. A cooling system with cooling pipes that run on top of the MCM-boards, using two-phase \ce{CO2} coolant, is considered. Another possibility would be to use micro-channel cooling, which has been developed by the semiconductor community. Such systems are presently further developed within the AIDA2020 project, for applications in high energy physics experiments. The ILC cycle is not realistic in a test beam environment as at e.g. DESY. To get a reasonable trigger rate is e.g. a cycle with \SI{5}{ms} beam at \SI{10}{Hz} more useful, which corresponds to \SI{343}{mW} per MCM-board on the top side and \SI{168}{mW} on the bottom side, in power pulsing mode.
 
 \subsection{Recent Milestones}
-A test system has been built and debugged. We are aiming at a readout system with at least 10,000 channels, which requires a yield of about 75\%. The tests of two pre-series have been completed. The first one, containing 34 chips, gave a lower yield, requiring an improved bonding procedure. The second pre-series, containing 55 chips, gave a yield well above the goal. We are prepared to request a quote for the full production. After the satisfactory tests of the second pre-sample, the design of the MCM board can now be finalized. A preliminary design of the low voltage board exists. An MCM-development board, containing only one packaged SALTRO-chip, has been produced and has been used in the tests of the serial readout system. The tests were successful, although some further firmware development is needed for the full functionality. The MCM-development board has been used for the tests of the chips, for which the present version of the DAQ-system is sufficient. A cooling system using micro-channel cooling is under discussion within AIDA2020.
+A test system has been built and debugged. We are aiming at a readout system with at least 10,000 channels, which requires a yield of about 75\%. The tests of two pre-series have been completed. The first one, containing 34 chips, gave a lower yield, requiring an improved bonding procedure. The second pre-series, containing 55 chips, gave a yield well above the goal and we decided to go ahead with the full production.
+The delivery of the bulk of the chips happened at the end of the year 2018.
+The design of the final 16-layer MCM-board was completed and the boards were manufactured.
+For test purposes two boards were mounted, one with 2 chips and the other with 7 chips. The
+first debugging was performed and a few bugs were fixed.
+The next step is to test the communication with the SRU, which is planned for week 2 in 2020.
+For the purpose of the tests a prototype LV board was designed and produced. The design of the
+final LV-board is well under way.
 
 \subsection{Engineering Challenges}
 The final aim is to produce front end electronics, high voltage supply and a cooling system which are compatible with a pad size of $1 \times \SI{6}{mm^2}$. The compactness of the electronics and the space limitations are major challenges, as well as designing a suitable and efficient cooling system. An elegant solution for the low voltage supply has to be found and due to space limitations the design of the mechanical support for the electronics is also a challenge.
 
 \subsection{Future Plans}
-The chip tests will be completed and depending on the outcome, it will be discussed within the LCTPC collaboration how to proceed. In case the decision is to continue with the project, the production of the MCM-board will follow. One fully mounted MCM-board with eight SALTRO16 chips will be produced and tested. The firmware for the serial readout will be further developed and tested. Discussions concerning micro-channel cooling will continue and we hope to get help with the design and production of a prototype system by AIDA2020.
+In case the upcoming tests are successful, a fully mounted MCM-board will be produced and tested.
+Until we have got help with the FPGA-programing we will not be able to test the rest of the chips and
+thus no further MCM-boards can be produced.
+The design of the micro-channel cooling support structure is ready and production is planned.
