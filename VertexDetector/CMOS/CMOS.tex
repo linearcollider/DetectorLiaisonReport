@@ -1,171 +1,194 @@
 \section{CMOS}
-Most recent update: 2016-12-02 \\
+Most recent update: 2020-04-25 \\
 Contact person: Marc Winter (email: marc.winter@iphc.cnrs.fr)
 
 \subsection{Introduction}
 CMOS Pixel Sensors (CPS) combine high granularity with low material
 budget and allow integrating the full signal processing circuitry on
-the sensor substrate. Being moreover cost effective because of the
-underlying industrial market, CPS are attractive for a wide range of
-applications. They are developed for the ILC since more than fifteen
-years and were shown to rather easily comply with the required spatial
-resolution and material budget of an ILC vertex detector and their
-radiation tolerance was observed to go well beyond the ILC requirements~\cite{Behnke:2013lya}. The state of the art of the technology is illustrated
-by the 400 ULTIMATE sensors operated in the STAR-PXL detector~\cite{Greiner201168}
-at RHIC/BNL since 2014 and by the 10 -- 100 times faster
-sensors developed for the upgrade of the ALICE Inner Tracker System
-(ITS)~\cite{0954-3899-41-8-087002}.
+the sensor substrate. They benefit from a steady technological progress 
+driven by an industrial market which makes them simultaneously cost 
+effective and attractive for a wide range of applications. They are 
+developed for an ILC vertex detector since about two decades and were 
+shown to rather easily comply with the required spatial resolution 
+and material budget expressed in the DBD~\cite{Behnke:2013lya}. The
+associated read-out time of a few tens of microseconds represented the
+limit achievable with a rolling shutter read-out and the \SI{350}{\nano\meter} CMOS 
+technology available at that time. The required radiation tolerance, 
+on the other hand, was observed to be well within the sensor potential.
+ 
+The relevance of the technology for subatomic physics experiments is established today with the 400 ULTIMATE sensors operated in the STAR-PXL 
+detector~\cite{CONTIN201860} at RHIC/BNL from 2014 to 2016, while the
+state of the art is well illustrated by the $\sim$ 20 times faster ALPIDE sensors fabricated ($>$ 20,000 dies) in a \SI{180}{\nano\meter} CMOS technology, to 
+equip the upgraded, $>$ \SI{10}{\meter\squared} large, ALICE Inner Tracker System 
+(ITS)~\cite{AGLIERIRINELLA2017583}. 
+The variety of devices where ULTIMATE has been implemented and, even 
+more so, where ALPIDE is foreseen to be integrated, reflects the maturity 
+of the technology and the steadily growing interest it generates in the
+field.
+ 
+  The detection performances achieved at the time of the DBD 
+assumed that integrating the beam related background over several tens 
+of bunch-crossings would result in a well affordable disturbance of the 
+event reconstruction. Since then, 
+potential benefits from shorter integration times, allowing for bunch 
+tagging or nearly so, have become clearer and desirable. This applies 
+for instance to the distinction between soft tracks due to beamstrahlung
+or two-photon collisions and those originating from a displaced vertex
+and therefore contributing to the vertex charge. The latter may get  
+particularly complicated to reconstruct in case of a higher machine 
+luminosity than foreseen in the TDR and of worse running conditions 
+than anticipated. 
+  
+  However, the goal of suppressing the impact of beam related background 
+on the physics performance by improving the sensor time resolution to 
+$\lesssim$ \SI{1}{\micro\second} steps up the preexisting tension between the 
+small pixel size imposed by the required spatial resolution and the 
+minimal space needed to implement the very front end circuitry inside 
+the pixels. The R\&D pursued so far did not show that a spatial 
+resolution of $\lesssim$ \SI{3}{\micro\meter} and a single bunch tagging are 
+actually achievable simultaneously within the same, \SI{50}{\micro\meter} thin, 
+sensor with the presently available CMOS technologies, moreover with 
+a power consumption compatible with air cooling. On the other hand, 
+$\sim$ \SI{4}{\micro\meter} spatial resolution may be within reach with sensors 
+featuring a continuous read-out time of $\lesssim$ \SI{1}{\micro\second} at an 
+affordable power consumption.
+
+  Indirect approaches are therefore being considered to achieve the 
+targeted spatial and time resolutions per layer even if they cannot be
+reached within a single sensor. They rely on the concept of double-sided detector layers, which provides two hits, one per layer face, for each traversing charged particle. The track 
+position and timing are extracted from the combination of the two 
+signals delivered by sensors facing each other in the same layer. 
+The position and timing may, for instance, come from a high precision 
+sensor located on one layer side and a faster, less precise, sensor 
+located on the opposite side. Alternatively, the spatial resolution 
+may be derived from the combination of opposite, identical, sensors 
+limited to \SI{4}{\micro\meter} spatial resolution measurements but providing 
+both $\lesssim$ \SI{1}{\micro\second} read-out time.     
 
 \begin{figure}
 	\centering
-	\includegraphics[width=.5\linewidth]{VertexDetector/CMOS/Ladder}
-	\includegraphics[width=.34\linewidth]{VertexDetector/CMOS/trackResolution.png}
-	\caption{left: Photograph of a MIMOSA ladder for EUDET. right: A track resolution of \SI{3}{\micro\meter} has been achieved.}
-	\label{fig:VertexDetector:CMOS}
+	\includegraphics[width=.43\linewidth]{VertexDetector/CMOS/principe-MixedLayers-noPixels.eps}
+	\includegraphics[width=.55\linewidth]{VertexDetector/CMOS/principe-MixedLayers-intermediatePoint.pdf}
+	\caption{Alternative approaches based on double-sided layers. Left: particles traverse a "pointing" sensor and a ``timing'' sensor equipping the two faces of a layer. Right: the signals of two ``timing'' sensors featuring $\sim$ \SI{4}{\micro\meter} resolution are combined into a single signal to obtain the required spatial resolution of $\lesssim$ \SI{3}{\micro\meter}.}
+	\label{fig:VertexDetector:CMOS:minivectors}
 \end{figure}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=.45\linewidth]{VertexDetector/CMOS/Mistral}
-	\includegraphics[width=.35\linewidth]{VertexDetector/CMOS/ALPIDE}
-	\caption{Two architectures are being developed: Left: synchronous readout in the MISTRAL chip. Right: asynchronous readout in the ALPIDE chip}
-	\label{fig:VertexDetector:CMOS:architectures}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=.5\linewidth]{VertexDetector/CMOS/doubleSided}
-	\caption{Double-sided ladders: mini-vectors providing
-      high spatial resolution and time stamping}
-	\label{fig:VertexDetector:CMOS:doubleSided}
-\end{figure}
-
-The achieved read-out speed of the CPS developed for an ILC
-vertex detector is already quite satisfactory~\cite{Behnke:2013lya},
-but is worth
-improving in order to facilitate track seeding at nominal ILC
-running conditions and to introduce a safety margin reflecting the
-uncertainties affecting the predicted beam related background rate.
-
-The technology should in fact allow single bunch tagging, provided power
-consumption and, in turn, power cycling remain under control. The flexibility and detection performances of CPS are also indicating attractive perspectives for trackers, where relaxed constraints on the granularity may be exploited
-to find a well suited balance between speed, power saving and material budget. Ambitious goals for an ILC experiment may therefore be considered
-since their development may be carried out for numerous years until the design
-inputs of a vertex detector ought to be fixed.
-
-The charged particle detection performances of CPS are
-currently essentially limited by manufacturing parametres.
-The latter evolve steadily since several years in a direction which makes
-them increasingly suited to the ILC vertexing and tracking. Besides
-achievements targetted with existing processes, the present R\&D
-addresses also improvements expected from the evolution of the CMOS
-industry, mainly driven by the trend towards smaller feature sizes which
-would allow overcoming the conflict between the spatial resolution and the
-bunch tagging capability of CPS. This evolution is already well visible
-when comparing the performances achieved with the $\SI{0.35}{\mu m}$ process
-used for the STAR-PXL and the more recently addressed $\SI{0.18}{\mu m}$ process
-used for the ALICE experiment.
-
-
-The R\&D adresses presently four objectives :
-\begin{itemize}
-\item 2 or 3 CPS variants optimised for the different vertex detector layers :
-\begin{itemize}
-\item inner layer : design privileging spatial resolution and read-out speed
-\item outer layers : design privileging power saving, exploiting the
-				less demanding spatial and time resolutions
-\end{itemize}
-\item CPS adapted to tracking sub-systems, based on large pixels and privileging
-power saving
-\item ultra-light double sided ladders (called PLUME~\cite{Nomerotski2011208})
-equipped with (identical or complementary) CPS on its two faces
-\end{itemize}
-
 
 \subsection{Recent Milestones}
-Specific CPS are being developed since 2011 to equip the Inner Tracking
-System (ITS) of the ALICE experiment in the framework of its upcoming
-upgrade. The surface to cover exceeds 10 square meters, i.e. nearly two
-ordres of magnitude more than the STAR-PXL or an ILC vertex detector.
+The most advanced CPS under development extendable to bridge the 
+gap between ALPIDE and a sensor adapted to an ILC vertex detector 
+is the MIMOSIS sensor~\cite{Morel:mimosis}, which is foreseen to 
+equip the 4 double-sided stations of the MicroVertex Detector (MVD) 
+of the CBM heavy ion experiment at FAIR/GSI. The sensor acts 
+simultaneously as a forerunner of a sensor suited to an ILC vertex 
+detector. With a pixel array continuous read-out derived from ALPIDE, 
+MIMOSIS features a 50 times higher hit density treatment capability 
+and a \SI{5}{\micro\second} read-out time. The latter may be compressed to 
+$\sim$ \SI{2}{\micro\second} for an ILC vertex detector, with an instantaneous 
+power density in the order of $\sim$ SI{50 -- 150}{\mili\watt\per\centimeter\squared}, depending 
+on the beam background induced hit density, and thereby on the 
+distance to the interaction point. Such performances should allow 
+facing the most pessimistic predictions for the background rate 
+impinging the vertex detector innermost layer. 
 
-Two CPS are being developed, differing by their read-out architectures.
-The most conservative of them, called MISTRAL-0, reproduces the ULTIMATE
-sensor equipping the STAR-PXL and is thus based on a synchronous, rolling-shutter, read-out. The concept underlying the other sensor, called ALPIDE, features an asynchronous read-out based on a token ring relying on a pre-amplifier/shaper/discriminator chain implemented in the pixel array. It
-allows for a few microsecond read-out time and for a power consumption below
-$\SI{50}{mW/cm^2}$. These performances were demonstrated in 2014~\cite{1748-0221-10-03-C03030}
-on a real scale prototype.
+The sensor single point resolution however, is not expected to reach
+values well below the ALPIDE value of \SI{5}{\micro\meter} because of the pixel 
+footprint imposed by the required in-pixel circuitry, which involves 
+about 200 transistors. Optimizing the spatial resolution will consist 
+in enhancing charge sharing by using the most appropriate epitaxial 
+layer thickness and by tuning the depletion voltage and the steering 
+parameters of the in-pixel circuitry. 
 
-MISTRAL-O relies on large pixels to achieve a $\SI{20}{\mu s}$ read-out
-time and a power consumption below $\SI{100}{mW/cm^2}$ while providing
-$\SI{10}{\mu m}$ resolution with its integrated binary encoding.
-Its read-out architecture was validated in 2014 with a real scale
-prototype~\cite{Winter:NSSMIC:2014} featuring 160,000 small ($22\times\SI{33}{\mu m^2}$
-large) pixels. More recently \cite{Winter:ALCW15}, prototypes composed of
-three times larger pixels were tested on beam and demonstrated satisfactory
-charged particle detection performances at
-\SI{30}{\degreeCelsius} and after radiation loads exceeding those expected at the
-ILC by several ordres of magnitude.
+After a first prototyping step validating the in-pixel circuitry and the 
+pixel array read-out (prototype MIMOSIS-0 featuring $64 \times 504$ pixels), 
+the first full scale prototype of MIMOSIS has been fabricated. It 
+incorporates $1024 \times 504$ pixels of $\SI{27}{\micro\meter} \times \SI{30}{\micro\meter}$. Its manufacturing 
+was accompanied by numerous small prototypes exploring in-pixel circuitry alternatives, allowing in particular for shorter read-out time. They 
+are supposed to complement studies made with MIMOSIS-0 showing that the 
+sensor charge collection system and the very front-end circuitry are 
+suited read-out times shorter than \SI{1}{\micro\second}~\cite{DEVEAUX2020162653}. 
+The performance assessment of the complete read-out chain should come 
+out through year 2021. Besides the vertex detector, this R\&D also 
+applies to tracking subsystems in general. An emblematic example is 
+the ILD-SIT, which may be equipped with double-sided layers based on 
+$\gtrsim$ \SI{5}{\micro\meter} resolution CPS featuring \SI{1}{\micro\second} read-out time.
 
-In summary, the full chain of the ULTIMATE sensor has been reproduced
-in a \SI{0.18}{\mu m} process with twice faster read-out frequency and
-improved sensitive volume (epitaxial layer) characteristics. The
-optimisation of this design for tracking systems, using relatively
-large pixels, is validated.
+ \begin{figure}
+	\centering
+	\includegraphics[width=.7\linewidth]{VertexDetector/CMOS/CHG-slide4.pdf}
+	\caption{Schematic representation of the MIMOSIS sensor developed to equip the CBM-MVD.}
+	\label{fig:VertexDetector:CMOS:MIMOSIS}
+\end{figure}
 
-Moreover, a small prototype of a sensor optimised for the vertex detector
-outer layers was realised in the $\SI{0.18}{\mu m}$ process mentioned earlier.
-Low power is achieved using enlarged, $\SI{35}{\mu m}$ pitch, square pixels and the
-spatial resolution is kept below $\SI{4}{\mu m}$ by integrating a 3-bit ADC in
-each pixel. The approach was validated in the former $\SI{0.35}{\mu m}$ process
-with the MIMOSA-31 prototype, but the ADCs had to be kept at the sensor
-periphery because of process limitations, translating into larger
-power consumption and slower read-out. Laboratory tests of the new
-prototype were performed since last Summer, showing satisfactory noise performances at nominal read-out speed, thus validating the concept.
+\begin{figure}
+	\centering
+	\includegraphics[width=.5\linewidth]{VertexDetector/CMOS/ALICE-Vertex-Stitched.pdf}
+    \caption{Schematic view illustrating the concept of a vertex detector based on stitched sensors curved according to a cylindrical geometry.}
+	\label{fig:VertexDetector:CMOS:stitching}
+\end{figure}
+
+Another important step achieved in recent years is the first operation 
+of ultra-light double-sided pixelated ladders in a real experimental 
+environment, based on two PLUME devices installed near the interaction 
+region of the BELLE-II experiment during the beam commissioning phase 
+called BEAST-II~\cite{CUESTA2020163862}. The ladders were ran successfully 
+through the period, contributing to the monitoring of the background 
+induced by SuperKEKB in the inner tracker volume with their \SI{3.3}{\micro\meter}
+single point resolution and their low material budget ($\sim$ \mbox{0.4\% X$_0$}),
+despite their modest read-out speed (\SI{115}{\micro\second}).   
 
 
-\subsection{Engineering Challenges}
-Squeezing the material budget of the double-sided PLUME ladders
-below $0.3\% X_0$ will the main engineering challenge, as the design
-has to account for the necessity to power pulse the ladders in the
-strong experimental magnetic field. Power pulsing seems mandatory
-in case of continuous read-out as the sensor design is unlikely to
-end up with a power density suppressed enough to avoid switching
-the sensors off inbetween consecutive trains. The possibility to
-introduce micro-channel cooling in the ladders will be studied in
-ordre to mitigate the power pulsing requirements.
+Squeezing the material budget of the double-sided PLUME ladders to 
+$\lesssim~0.3\%~X_0$ remains of prime interest but represents a major engineering challenge, possibly complicated by the necessity to 
+power pulse ladders in the strong experimental magnetic field. 
+Power pulsing is suspected to be needed in case of continuous 
+read-out with the present sensor design, derived from MIMOSIS. 
+However, whether it will be needed for all layers and for a sensor
+fabrication process with smaller feature size remains an open 
+question. Moreover, the possibility to introduce micro-channel 
+cooling in the ladders will also be considered in order to mitigate 
+power pulsing requirements.
+
+Another engineering challenge may follow from the possibility 
+to realise wafer scale sensors benefitting from the stitching
+proposed by CMOS foundries for commercial imagers (see the next
+subsection). In this case, the sensors would be curved to form 
+large parts of a cylinder and would need a specific mechanical
+concept to ensure rigidity and low mass cooling services.  
 
 \subsection{Future Plans}
-Several development directions will be pursued in the coming years,
-to improve the performances of the CPS and to assess the added value
-of the ultra-light double-sided ladder concept.
+The achieved performances, which may already be considered as 
+relatively satisfactory, are anticipated to be boosted in the 
+coming years by industrial progress, following in particular 
+from evolutions of the ASIC production technology, which drives 
+steady miniaturization of integrated circuits. CMOS foundries 
+also offer the possibility of stitching, which allows for 
+wafer-scale sensors. Once thinned to a few tens of microns, 
+the sensor may be curved according to a cylindrical surface, 
+with a sizeable gain in stiffness. A few sensors only are then 
+required to equip a complete detector layer, with a drastic 
+suppression of mechanical support material consecutive to the 
+disappearance of overlaps between neighboring detector modules. 
+This concept is promoted by the ALICE collaboration, which aims 
+for an upgrade of its vertex detector~\cite{CERN-LHCC-2019-018}. Maximum 
+benefit is expected for the innermost detector layer, where the 
+beam pipe may act as a mechanical support. 
 
-The development of CPS will mainly aim at realising a prototype of
-a new sensor series, called IBISCUS\footnote{standing for {\bf I}lc
-{\bf B}unch {\bf I}dentifying {\bf S}ensor {\bf C}ompatible with
-{\bf U}ltraprecise {\bf S}patial resolution},
-composed of pixels with less than $\SI{20}{\mu m}$ pitch providing a
-read-out time of about $\SI{1}{\mu s}$ (using a token ring read-out).
+  Stitching is available in the \SI{180}{\nano\meter} CMOS process used for 
+ALPIDE and MIMOSIS. It is also accessible in a forthcoming 65~nm 
+imaging process investigated at CERN within a partnership involving 
+groups interested in various applications, including ILC related 
+tracking devices. The process should in particular allow for 
+reduced pixel dimensions, and therefore improved single point 
+resolution. Overall, the evolution toward this \SI{65}{\nano\meter} CMOS process 
+is particularly appealing and should take advantage from a 
+cross-fertilization between numerous projects.
 
-The R\&D on the other CPS versions mentioned earlier (for the vertex
-detector outer layers and for tracking sub-systems) will be pursued
-with coarser priority.
-Besides these continuous read-out architectures, a sensor composed
-of $\SI{4}{\mu m}$ pitch square pixels with analog output, foreseen to be
-read out inbetween trains like FPCCDs, will also be studied.
-
-% Studies have shown \cite{1748-0221-10-03-C03030} that the track reconstruction
-% would still improve if the sensors could separate individual bunch
-% crossings, thus
-
-Different versions of double-sided ladders will be realised and
-their performances evaluated in terms of spatial accuracy, including
-alignment issues, and in terms of stability against power pulsing,
-possibly in a high magnetic field.
-
-The two main alternative design options are going to be compared
-to each other. One version is based on a high precision sensor
-($<\SI{3}{\mu m}$) on one side featuring $\lesssim\SI{50}{\mu s}$ integration
-time, while a fast sensor (\sim\SIrange{2}{3}{\mu s}) equips the other side
-which provides \sim\SI{5}{\mu m} resolution. The other version is based
-on a single sensor equipping both ladder sides, which offers \sim\SI{4}{\mu m}
-spatial resolution and about \SI{5}{\mu s} time resolution.
+  Another promising R\&D direction addresses the realization of 
+two-tier chips interconnected at the pixel level through industrial 
+micro-bonding techniques. High-density micro-bonding is getting 
+widespread, which allows to distribute the analog front-end and 
+the digital circuitry of a pixel among two different chips being 
+ultimately interconnected at the pixel level. The result is a 
+reduced pixel size which improves the spatial resolution and 
+enhances the data compression. A micro-bonding process already 
+successfully tried with SoI sensors, is getting explored with CPS.
