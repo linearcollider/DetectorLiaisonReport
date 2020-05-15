@@ -1,26 +1,55 @@
-\section{KPIX Silicon Tracking}
+\section{KPiX Silicon Tracking}
 Most recent update: 2020-05-1135 \\
-Contact person: Marty Breidenbach (email: mib@slac.stanford.edu)
-Contact person: Marcel Stanitzki (email: marcel.stanitzki@desy.de)
-Contact person: Mengqing Wu (email: mengqing.wu@desy.de)
+Contact person: Marty Breidenbach (email: mib@slac.stanford.edu)\\
+Contact person: Marcel Stanitzki (email: marcel.stanitzki@desy.de)\\
+Contact person: Mengqing Wu (email: mengqing.wu@desy.de)\\
+
+
+\newcommand{\LYCORIS}{{\textsc{Lycoris}}\xspace}
+\newcommand{\DESYII}{{\mbox{DESY II}}\xspace}
+\newcommand{\DIITBF}{{\DESYII Test Beam Facility}\xspace}
+
+
 \subsection{Introduction}
-
-The design of the SID Tracker is based on \cite{Behnke:2013lya},
-
-
+The baseline design of the SID Tracker as presented in the ILC TDR~\cite{Behnke:2013lya} is based on an all-silicon approach.
+The main tracker technology of choice is silicon strip sensors arrayed in five nested cylinders in the central
+region and four disks following a conical surface with an angle of 5~degrees with respect to the normal to the 
+beam line in each of the end regions. The geometry of the end-caps minimizes the material budget to enhance 
+forward tracking. The basic building block is a module consisting of a single-sided silicon sensor and two KPiX readout ASICS>
+The sensors have a size of  approximately 10 $\times$ 10 cm$^2$, a strip pitch of 25~\micron and a readout pitch of 50~\micron. 
+The end-caps utilise two modules back-to-back for small angle stereo measurements. 
+A drawing of a Tracker module is shown in Figure~\ref{fig:SiliconTrackin:KPiX:module}
 \begin{figure}
 \includegraphics[width=0.49\textwidth]{Tracker/KPIX/Tracker_Module_SiD_Drawing.png}
 \includegraphics[width=0.49\textwidth]{Tracker/KPIX/Tracker_Module_SiD_Photo.jpg}
-\caption{This SiD Tracker Module as foreseen for the baseline SiD Tracker\cite{Behnke:2013lya} and a first prototype sensor completely assembled}
+\caption{This SiD Tracker Module as foreseen for the baseline SiD Tracker\cite{Behnke:2013lya} and a first prototype sensor completely assembled at DESY}
+\label{fig:SiliconTrackin:KPiX:module}
 \end{figure}
 
+The KPiX AISC is a 1024 channel ``System on a Chip'' intended for bump bonding 
+to large area silicon sensors, enabling low multiple scattering silicon-strip 
+tracking and high density Particle Flow calorimetry for SiD at the ILC. 
+Each channel consists of a dynamically switchable gain charge amplifier; 
+shaping; threshold discrimination; and four sample and hold 
+capacitors and four timing registers. The chip permits four  separate measurements of 
+amplitude and time of threshold crossing during each train, and amplitude 
+digitization and readout during the intertrain period. The dynamic range is from 
+sub minimum ionizing particle (MIP) (in \SI{320}{\micro\meter} silicon) to more 
+than 2000 MIP. KPiX also has a calibration system for each channel, servos for 
+leakage compensation, ``DC'' reset for asynchronous operation for testing with 
+cosmic rays, and polarity inversion for use with GEMs and similar detectors. The 
+noise floor is about \SI{0.15}{fC} ($\simeq$ 1000 electrons), and the maximum 
+signal is \SI{10}{pC} (utilizing the dynamic range switching). The full dynamic 
+range corresponds to 17 bits.
 
-KPiX is a 1024 channel ``System on a Chip'' intended for bump bonding to large area Si sensors, enabling low multiple scattering Si strip tracking and high density Particle Flow calorimetry for SiD at the International Linear Collider (ILC). Each channel consists of a dynamically switchable gain charge amplifier; shaping; threshold discrimination; and 4 sample and hold capacitors and 4 timing registers. The chip permits 4 separate measurements of amplitude and time of threshold crossing during each train, and amplitude digitization and readout during the intertrain period. The dynamic range is from sub minimum ionizing particle (mip) (in \SI{320}{\micro\meter} silicon) to more than 2000 mip. KPiX also has a calibration system for each channel, servos for leakage compensation, ``DC'' reset for asynchronous operation for testing with cosmic rays, and polarity inversion for use with GEMs and similar detectors. The noise floor is about \SI{0.15}{fC} ($\simeq$ 1000 electrons), and the maximum signal is \SI{10}{pC} (utilizing the dynamic range switching). The full dynamic range corresponds to 17 bits.
 
 \subsection{Recent Milestones}
 ILC related R\&D in the US has been largely unfunded and small efforts are being kept alive. The KPiX R\&D is such an example of necessary work for SiD.
+In the last three years, the R\&D for KPiX Silicon has been used to design a large-area silicon-strip telescope -- called \LYCORIS -- for the \DIITBF~\cite{desytb2018}
+as part of the Horizon2020-funded AIDA2020~\cite{aida2020} project.
 
-\item Tracker Sensors: The current prototypes will be evaluated, and if appropriate tested in a beam.
+
+Tracker Sensors: The current prototypes will be evaluated, and if appropriate tested in a beam.
 
 Future sensors will be ordered with Au pads.
 
@@ -40,12 +69,15 @@ Tracker sensors are now at IZM for the pad plating and subsequent bonding of KPi
 
 
 \subsection{Future Plans}
-Assuming positive developments with Japan are announced soon, we expect the financial support to improve. It should be noted that an important effect of the withdrawal of support is that most of the US collaborators have been forced to move to other work.
+Assuming positive developments with Japan are announced soon, we expect the financial support to improve. It should be noted that
+an important effect of the withdrawal of support is that most of the US collaborators have been forced to move to other work.
 \begin{itemize}
 
 
 	\item KPiX: A new architecture with little (or no) deadtime will be evaluated. A decision will be made to develop this new architecture or incrementally.
 	\item improve the existing design.
 \subsection{References}
-
+\fullcite{Kraemer:2018qzh}\\
+\fullcite{Kraemer:2019xku}\\
+\fullcite{Wu:2020jdk}\\
 \end{itemize}
