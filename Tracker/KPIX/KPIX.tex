@@ -21,9 +21,13 @@ region and four disks following a conical surface with an angle of 5~degrees wit
 beam line in each of the end regions. The geometry of the end-caps minimizes the material budget to enhance 
 forward tracking. The basic building block is a module consisting of a single-sided silicon sensor, two \KPIX readout ASICS and a small Kapton-flex cable
 for power delivery and signal distribution.
-The sensors have a size of  approximately 10 $\times$ 10 cm$^2$, a strip pitch of \SI{25}{\micro\meter} and a readout pitch of \SI{50}{\micro\meter}.
+The sensors have a size of approximately 10 $\times$ 10 cm$^2$, a strip pitch of \SI{25}{\micro\meter} and a readout pitch of \SI{50}{\micro\meter}.
 The end-caps utilizes two modules back-to-back for small angle stereo measurements. 
-A drawing of a Tracker module is shown in Figure~\ref{fig:SiliconTrackin:KPiX:module}
+Each sensor is read out by two \KPIX ASICS and connected to the DAQ and the power-supply system using a small Kapton-flex cable. This hybrid-less design 
+further reduces the material budget leading two a very light-weight tracking system. A drawing of a Tracker module is shown in 
+Figure~\ref{fig:SiliconTrackin:KPiX:module}.
+
+
 \begin{figure}
 \includegraphics[width=0.49\textwidth]{Tracker/KPIX/Tracker_Module_SiD_Drawing.png}
 \includegraphics[width=0.49\textwidth]{Tracker/KPIX/Tracker_Module_SiD_Photo.jpg}
@@ -39,50 +43,66 @@ Each channel consists of a dynamically switchable gain charge amplifier;
 shaping; threshold discrimination; and four sample and hold 
 capacitors and four timing registers. The chip permits four  separate measurements of 
 amplitude and time of threshold crossing during each train, and amplitude 
-digitization and readout during the intertrain period. The dynamic range is from 
+digitization and readout during the inter-train period. The dynamic range is from 
 sub minimum ionizing particle (MIP) (in \SI{320}{\micro\meter} silicon) to more 
 than 2000 MIP. \KPIX also has a calibration system for each channel, servos for 
 leakage compensation, ``DC'' reset for asynchronous operation for testing with 
 cosmic rays, and polarity inversion for use with GEMs and similar detectors. The 
 noise floor is about \SI{0.15}{fC} ($\simeq$ 1000 electrons), and the maximum 
 signal is \SI{10}{pC} (utilizing the dynamic range switching). The full dynamic 
-range corresponds to 17 bits. \KPIX is manufactured using a \SI{250}{\nano\meter} process at TSMC.
+range corresponds to 17 bits. \KPIX was manufactured using a \SI{250}{\nano\meter} process at TSMC.
 
 \subsection{Recent Milestones}
 ILC related R\&D in the US has been largely unfunded and small efforts are being kept alive. The \KPIX R\&D is such an example of necessary work for \SID.
 In the last three years, the R\&D for \KPIX Silicon Tracker has been used to design and build a large-area silicon-strip 
 telescope -- called \LYCORIS -- for the \DIITBF~\cite{desytb2018} as part of the Horizon2020-funded AIDA2020~\cite{AIDA2020} project.
+\LYCORIS did require both the coverage of a large area (10 $\times$ \SI{10}{\centi\meter}
 
 Based on the experiences with the first set of sensors, the second generation of sensors was produced by Hamamatsu 
 using Au pads for the \KPIX bump-bonds and with a thicker oxide-layer. This was necessary, because the first generation Tracker sensor could not be 
 wire-bonded to its (very thin) cable, which was unexpected. It was discovered, that the sensor oxide layer was not strong enough 
 to allow wire bonding without damaging the sensor itself.
 
+These changes have proven successful and these sensors were successfully bump-bonded to two \KPIX ASICS and wire-bonded to their Kapton-flex pigtail 
+(See Figure~\ref{fig:SiliconTrackin:KPiX:module}. 
+
+The \LYCORIS telescope has been succesfully assembled and 
+
+
 
 \subsection{Engineering Challenges}
-At this time, \KPIX is seen as the baseline readout system for the tracker and electromagnetic calorimeter. A stack of 13 EMCal sensors with bump bonded \KPIX was assembled for a beam test at SLAC in the summer of 2013. That test discovered that two kinds of cross-talk are significant:
-\begin{itemize}
-	\item In-time cross talk occurs due to parasitic coupling of traces on metal 2 of the sensor to other pixels. The level of cross-talk increases 
-	with the size of the signal, and decreases with increased speed of the front end charge amplifier (meaning increased current and power dissipation).  
-	A new sensor design is being developed that uses metal 1 to shield the traces of metal 2, and these ideas will be tested in the next sensor prototype.
-	\item Out-of-time cross talk occurs when many pixels are hit and reset simultaneously. The resets collectively cause other pixels to trigger, and a 
-	cascade builds up. This uses up all the \KPIX buffers. The root cause of the problem appears to be some internal logic within \KPIX that is not current limited, and will require design modification.
-\end{itemize}
+At this time, \KPIX is seen as the baseline readout system for both the \SID tracker and electromagnetic calorimeter. 
 
+The \LYCORIS telescope has demonstrated that the hybrid-less approach works well, the issues both with wire-bonding and 
+bump-boding have been addressed and the modules can be made with a high yield - albeit this is based on small statistics.
 
-Another concern is that the current design of \KPIX has deadtime after a pixel has accepted a trigger. Only the triggered pixel is affected; all the other pixels are available for signals. This deadtime is different from the usual notion of data acquisition deadtime where the entire detector is unavailable, but the correction to the luminosity integral is easy. Finally, the buffer requirement (4 in the current version of \KPIX) is being re-evaluated in \SID simulations. A possible new architecture for \KPIX is in early stages of evaluation.
-A small mechanical engineering effort has started to study the structure of the EMCal. The Sid EMCal has emphasized thin gaps between the tungsten layers to minimize the Moliere radius, and this implies that the structure is connected by columns at the vertices of the sensors. The DBD design shows hexagonal sensors, which indeed are the most efficient way of tiling large areas, but no consideration was given to the edges of these arrays. The design is being re-evalutated to optimize the cost-effectiveness over the whole area taking into account geometric efficiencies and total wafer cost.
-Tracker sensors are now at IZM for the pad plating and subsequent bonding of \KPIX; they will then go to UCD for cable attachment and testing.
+There remain however some noise issues with the current \KPIX design, particular in the so-called high-gain mode, 
+which is important for the tracker. This is currently under detailed study and the results will inform a possible 
+next-generation \KPIX. Another concern is that the current design of \KPIX has dead time after a pixel 
+has accepted a trigger. Only the triggered pixel is affected; all the other 
+pixels are available for signals. This dead time is different from the usual 
+notion of data acquisition dead time where the entire detector is unavailable, 
+but the correction to the luminosity integral is easy. Finally, the buffer 
+requirement (four in the current version of \KPIX) has being re-evaluated in \SID  
+simulations using the latest beam background estimates. The conclusions are, that particularly for the end-caps a move to 8 or more buffers is beneficial.
+A possible new architecture for \KPIX is in early stages of  evaluation.
 
 
 \subsection{Future Plans}
-Assuming positive developments with Japan are announced soon, we expect the financial support to improve. It should be noted that
-an important effect of the withdrawal of support is that most of the US collaborators have been forced to move to other work.
-\begin{itemize}
+\LYCORIS is now going to be used at the \DIITBF and is made avaialble to all users. This will yield essential long-term operational experience and 
+advance the experience with the hybrid-less modules.  
 
+For \KPIX a new architecture with little (or no) deadtime will be evaluated. A decision will be made to develop this new architecture or incrementally 
+improve the existing design. At the same time, \SID will discuss, whether moving to a fully monolithic tracker sensor is beneficial given the past technological 
+developments and the timescales involved.
 
-	\item \KPIX: A new architecture with little (or no) deadtime will be evaluated. A decision will be made to develop this new architecture or incrementally.
-	\item improve the existing design.
+	
+	
+Assuming positive developments with Japan are announced soon, we expect the financial support to improve globally. It should be noted that
+an important effect of the withdrawal of support is the slow decay of expertise, with many collaborators having to work on other projects. We expect, that 
+a positive statement will lead to resurgence of interest in this technology./
+
+	
 \subsection{References}
 
 \begin{itemize}
