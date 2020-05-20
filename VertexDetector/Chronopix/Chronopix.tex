@@ -1,21 +1,22 @@
 \section{ChronoPixel}
-Most recent update: 2015-11-11 \\
+Most recent update: 2020-05-15 \\
 Contact person: Jim Brau (email: jimbrau@uoregon.edu)
 \subsection{Introduction}
 The ChronoPixel is a monolithic CMOS pixelated sensor with the ability to record up to two time stamps of pixel hits by charged particles in a nominal ILC bunch train. This information is read out in the time interval between bunch trains. The ChronoPixel option for the ILC vertex detector was described in the ILC DBD~\cite{2011arXiv1109.2811B}. By the time of the DBD, 2 prototypes had been built and tested, and the summary of test results was also presented in the DBD. The main points are:
 
 \begin{figure}
     \centering
-    \begin{minipage}[t]{0.35\textwidth}    \includegraphics[width=\linewidth]{VertexDetector/Chronopix/Chronopix_image}
-    \caption{Photograph of the prototype 3 chip in its package. The chip has $48\times48$ pixels, each with a size of $25\times\SI{25}{\micro\meter^2}$.}
-    \label{fig:VertexDetector:ChronoPixel:image}
-\end{minipage}\quad
-\begin{minipage}[t]{0.35\textwidth}
-    \includegraphics[width=\linewidth]{VertexDetector/Chronopix/Fe55tst}
-    \caption{\ce{^{55}Fe} signal over threshold counts for 6 different sensor diode options,
+    \begin{minipage}[t]{0.35\textwidth}
+        \includegraphics[width=\linewidth]{VertexDetector/Chronopix/Chronopix_image}
+        \caption{Photograph of the prototype 3 chip in its package. The chip has $48\times48$ pixels, each with a size of $25\times\SI{25}{\micro\meter^2}$.}
+        \label{fig:VertexDetector:ChronoPixel:image}
+    \end{minipage}\quad
+    \begin{minipage}[t]{0.35\textwidth}
+        \includegraphics[width=\linewidth]{VertexDetector/Chronopix/Fe55tst}
+        \caption{\ce{^{55}Fe} signal over threshold counts for 6 different sensor diode options,
 implemented in prototype 3. For comparison, option 1 is the same as in prototype 2.}
-    \label{fig:VertexDetector:ChronoPixel:Fe55Response}
-\end{minipage}
+        \label{fig:VertexDetector:ChronoPixel:Fe55Response}
+    \end{minipage}
 \end{figure}
 
 \begin{itemize}
@@ -32,6 +33,9 @@ implemented in prototype 3. For comparison, option 1 is the same as in prototype
     \item Test of prototype 2 revealed some problems. Possible solutions for these problems were discussed with Sarnoff engineers.
     \item A new contract with Sarnoff for the design of prototype 3 was signed in August 2013.
     \item Prototype 3 was manufactured in September 2014. Tests have shown that problems revealed in prototype 2 were solved.
+    \item The third prototype was exposed to HL-LHC radiation levels.  Immunity at the level required
+    for the ILC was easily exceeded, as well as the level required for some applications at the
+    HL-LHC.  See \cite{Brau:Chronopix:2019CPAD} for results.
 \end{itemize}
 The most recent report~\cite{sinev:POS:Vertex2105} on the status of ChronoPixel was presented by N.~Sinev in June 2015 at Vertex2015 in Santa Fe, New Mexico.
 
