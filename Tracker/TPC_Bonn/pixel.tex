@@ -72,7 +72,13 @@ the currently used Timepix. The new Timepix-3 features several improvements,
 which promise a much better performance. In particular it is multi-hit capable,
 can record both time and charge of each signal, has a much faster
 digitization frequency (\SI{640}{\mega\hertz}) and can be read out  quasi continuously.
-Also, the grid design was revised increasing the active area to 97.7 percent of the pixel area. First Timepix-3-based GridPix detectors have been built and tested. A testbeam campaign was conducted in July 2017 at the ELSA accelerator in Bonn and a single GridPix detector was exposed to an 2.5 GeV electron beam \cite{Ligtenberg:2018sjs}. The performance clearly surpassed the one of Timepix-based GridPixes. In particular the longitudinal spatial resolution could be improved by over one order of magnitude. 
+Also, the grid design was revised increasing the active area to 97.7\% of the pixel area. First Timepix-3-based GridPix detectors have been built and tested. A testbeam campaign was conducted in July 2017 at the ELSA accelerator in Bonn and a single GridPix detector was exposed to an \SI{2.5}{GeV} electron beam \cite{Ligtenberg:2018sjs}. The performance clearly surpassed the one of Timepix-based GridPixes. In particular the longitudinal spatial resolution could be improved by over one order of magnitude. 
+As a next step, in 2018 a quad consisting of four GridPix detector was constructed and
+tested~\cite{Ligtenberg:2020ofy}. Special attention was given to the mechanical and electrical design of the
+guard structure to maximize coverage and minimize distortions. The distortions in the
+precision plane stay below the 13 microns and meet the design specifications of a TPC at a
+linear collider. A module consisting of 8 Quads has been constructed and will be tested in
+2020.
 
 \subsection{Engineering Challenges}
 The production of modules with large area coverage requires to solve four
@@ -88,6 +94,12 @@ Nikhef developed (partially funded by the AIDA FP7 project) the SPIDR fast reado
 \item In order to overcome systematic limitations of track reconstruction, field
   distortions caused by tilted chips and only partially covered ground
   potentials need to be mitigated.
+\item In order to reduce the ion back flow a gating grid (as discussed below in section~\ref{chap:TPC_sec:gating}) can
+be installed. For a GridPix a solution based on a double grid - with a same hole pattern - is possible.
+This will reduce the ion backflow continuously(, as e.g. needed for high luminosity Z running
+at circular a machine). Both the gating grid and the double grid solution need further
+studies and tests.
+
 \end{enumerate}
 
 \subsection{Future Plans}
