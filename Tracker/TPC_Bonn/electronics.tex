@@ -1,6 +1,6 @@
 \section{Electronics, DAQ and Cooling}
 \label{chap:TPC_sec:electronics}
-Most recent update: 2020-01-03 \\
+Most recent update: 2020-05-12 \\
 Contact person: Leif J{\"o}nsson (email: leif.jonsson@hep.lu.se)
 
 \subsection{Introduction}
@@ -27,14 +27,10 @@ Cooling of the front end electronics is a challenge since the size of the coolin
 is \SI{3203}{mW} on the top side and \SI{3028}{mW} on the bottom side. In power pulsing mode, with a bunch train of \SI{725}{\micro s}, containing 1312 bunches, the power dissipation is reduced to about \SI{223}{mW} per MCM-board on the top side and \SI{48}{mW} on the bottom side. A cooling system with cooling pipes that run on top of the MCM-boards, using two-phase \ce{CO2} coolant, is considered. Another possibility would be to use micro-channel cooling, which has been developed by the semiconductor community. Such systems are presently further developed within the AIDA2020 project, for applications in high energy physics experiments. The ILC cycle is not realistic in a test beam environment as at e.g. DESY. To get a reasonable trigger rate is e.g. a cycle with \SI{5}{ms} beam at \SI{10}{Hz} more useful, which corresponds to \SI{343}{mW} per MCM-board on the top side and \SI{168}{mW} on the bottom side, in power pulsing mode.
 
 \subsection{Recent Milestones}
-A test system has been built and debugged. We are aiming at a readout system with at least 10,000 channels, which requires a yield of about 75\%. The tests of two pre-series have been completed. The first one, containing 34 chips, gave a lower yield, requiring an improved bonding procedure. The second pre-series, containing 55 chips, gave a yield well above the goal and we decided to go ahead with the full production.
+A system for testing the SALTRO-16 chips has been built and debugged. We are aiming at a readout system with at least 10,000 channels, which requires a yield of about 75\%. The tests of two pre-series have been completed. The first one, containing 34 chips, gave a lower yield, requiring an improved bonding procedure. The second pre-series, containing 55 chips, gave a yield well above the goal and we decided to go ahead with the full production.
 The delivery of the bulk of the chips happened at the end of the year 2018.
-The design of the final 16-layer MCM-board was completed and the boards were manufactured.
-For test purposes two boards were mounted, one with 2 chips and the other with 7 chips. The
-first debugging was performed and a few bugs were fixed.
-The next step is to test the communication with the SRU, which is planned for week 2 in 2020.
-For the purpose of the tests a prototype LV board was designed and produced. The design of the
-final LV-board is well under way.
+The design of the final 16-layer MCM-board was completed and the boards were manufactured. By pushing the boundaries of commercially available assembly techniques to the limit, read-out of sensor pads, as small as \SI{6.3}{mm^2}, could be achieved with the MCM-board connected parallel to the pad plane. We have simplified the design by reducing the number of separate voltage levels needed from seven to two. Initial tests revealed some bugs in the PCB design, most of which could be fixed. Prior to the performance tests of the MCM-board, a prototype LV board, providing low voltage supply for a single MCM-board, was designed and produced. The design of the final LV-board intended for five MCM-boards is well under way.
+For tests of the performance, two MCM-boards were mounted by the DESY electronics group at the end of 2019. The tests showed that data could be read and written and thus the concept was proven to work. Pedestal runs were performed and gave good results, and the noise performance was promising. However, this first prototype of the readout board required some corrections, which have been implemented and the next version of the MCM PCB has been ordered. The official delivery time was 8.5.2020, but at the time of writing the supplier claims a delay of about one week. The assembly by the DESY electronics group will follow together with further tests.
 
 \subsection{Engineering Challenges}
 The final aim is to produce front end electronics, high voltage supply and a cooling system which are compatible with a pad size of $1 \times \SI{6}{mm^2}$. The compactness of the electronics and the space limitations are major challenges, as well as designing a suitable and efficient cooling system. An elegant solution for the low voltage supply has to be found and due to space limitations the design of the mechanical support for the electronics is also a challenge.
