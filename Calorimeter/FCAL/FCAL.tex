@@ -1,5 +1,5 @@
 \section{FCAL}
-Most recent update: 2020-05-11 \\
+Most recent update: 2020-05-24 \\
 Contact person: Wolfgang Lohmann (email: Wolfgang.Lohmann@desy.de)
 
 \subsection{Introduction}
@@ -49,7 +49,7 @@ LHCal will be designed with a small hadronic interaction length, to fit into the
 \subsubsection{Currently used Sensors}
 
 Large area GaAs sensors, as shown in Figure~\ref{fig:GaAs} (left), were developed
-and produced in collaboration with partners in industry. The Liquid Encapsulated
+and produced in collaboration with partners in Russian industry. The Liquid Encapsulated
 Czochralski technology is used. The sensors were
 doped by a shallow donor (Sn or Te),
 and then compensated  with Chromium.
@@ -121,7 +121,7 @@ The development of FLAME has been recently completed. The laboratory tests confi
 
 In order to operate a large amount of sensor planes the readout has to be orchestrated.
 For this purpose a FPGA based data concentrator is developed.
-The prototype of a DAQ  module  based on a Zynq UltraScale+ FPGA on a Trenz TE0808m board.
+The prototype of a DAQ module uses a Zynq UltraScale+ FPGA on a Trenz TE0808m board.
 The module reads data sent by FLAME, processes and sends them to an external data store using ethernet transmission. 
 The current architecture with the generated blocks inside the FPGA is shown in Figure~\ref{fig:FPGA_scheme}. 
 
@@ -134,7 +134,7 @@ The current architecture with the generated blocks inside the FPGA is shown in F
 
 \subsubsection{High Quality Tungsten Absorber Plates}
 
-A batch of 25 absorber plates has been fabricated by partners in the industry. 
+A batch of 25 absorber plates has been fabricated for JINR Dubna by partners in the Russian industry. 
 The absorber composition is W 92.5\%, Ni 5.25\%, and Cu 2.25\%.
 The material density is \SI{18.0}{\gram\per\centi\meter\cubed}. The thickness of the plates has been assessed using a Zeiss 3D coordinate
 measurement system with a precision \SI{2.5}{\micro\meter}. Front and back side measurements were done. The deviation
@@ -149,12 +149,12 @@ from planarity is for most of the plates within \SI{50}{\micro\meter} as shown i
 \subsubsection{Mechanical Stack}
 
 A flexible mechanical structure, as shown in Figure~\ref{fig:mechanical_structure}, has been 
-built as part of the AIDA project,
+built by CERN as part of the AIDA project,
 to compose a technological 
 calorimeter prototype instrumented both with LumiCal and BeamCal sensors. 
 Tungsten absorber plates, glued on a permaglass
 frame, are precisely
-positioned on a rod assembly, and interspersed with fully assembled sensor planes.
+positioned on a rod assembly, and interspersed with fully assembled detector planes.
 \begin{figure}
     \centering
     \includegraphics[width=0.6\columnwidth,]{Calorimeter/FCAL/figs/mechanical_structure_2}
@@ -172,7 +172,7 @@ Test-beams were used to continue radiation hardness studies and study partly ins
 Calorimeter prototypes are built of tungsten absorber plates interspersed with detector  planes as described below. Detector planes comprise a sensor, Kapton fan-outs and FE ASICs.
 The first milestones were the measurements in the test-beam of a four
 detector plane prototype~\cite{Abramowicz:2017cer} and of a six detector plane prototype~\cite{Abramowicz:2018vwb}. 
-Recently measurements have been performed with a stack instrumented with 11 sensor planes, out of which 3 have been operated with the FLAME readout.   
+Recently, measurements have been performed with a stack instrumented with 11 detector planes, out of which 3 have been operated with the FLAME readout.   
 
 \subsubsection{Radiation Damage Studies}
 
@@ -310,7 +310,7 @@ In a recent test-beam campaign part of the calorimeter prototype was equipped wi
 \subsection{Engineering Challenges}
 Engineering challenges within the current and future research of FCAL are the following:
 \begin{itemize}
-\item A slim assembled sensor plane. First prototypes of a ultra-thin detector planes have been successfully 
+\item A slim assembled detector plane. First prototypes of a ultra-thin detector planes have been successfully
 manufactured and used in test-beam measurements.
 These technologies need to be completed and transferred into mass production. 
 \item Miniaturized PCBs using FLAME chips, to be applicable in an experiment 
