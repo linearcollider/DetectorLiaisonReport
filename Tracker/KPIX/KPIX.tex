@@ -4,15 +4,11 @@
 \newcommand{\SID}{{SiD}\xspace}
 \newcommand{\KPIX}{{KPiX}\xspace}
 
-
 \section{\KPIX Silicon Tracking}
 Most recent update: 2020-05-1135 \\
 Contact person: Marty Breidenbach (email: mib@slac.stanford.edu)\\
 Contact person: Marcel Stanitzki (email: marcel.stanitzki@desy.de)\\
 Contact person: Mengqing Wu (email: mengqing.wu@desy.de)\\
-
-
-
 
 \subsection{Introduction}
 The baseline design of the \SID Tracker as presented in the ILC TDR~\cite{Behnke:2013lya} is based on an all-silicon approach.
@@ -26,8 +22,6 @@ The end-caps utilizes two modules back-to-back for small angle stereo measuremen
 Each sensor is read out by two \KPIX ASICS and connected to the DAQ and the power-supply system using a small Kapton-flex cable. This hybrid-less design 
 further reduces the material budget leading two a very light-weight tracking system. A drawing of a Tracker module is shown in 
 Figure~\ref{fig:SiliconTracking:KPIX:module}.
-
-
 \begin{figure}
 \includegraphics[width=0.49\textwidth]{Tracker/KPIX/Tracker_Module_SiD_Drawing.png}
 \includegraphics[width=0.49\textwidth]{Tracker/KPIX/Tracker_Module_SiD_Photo.jpg}
@@ -54,8 +48,6 @@ range corresponds to 17 bits. \KPIX was manufactured using a \SI{250}{\nano\mete
 In addition to its use in the \SID tracking system  \KPIX is also the proposed readout ASIC  for the \SID Silicon-
 tungsten sampling electromagnetic calorimeter (see Section~\ref{sec:Calorimeter:SiliconTungstenSiD}).
 
-
-
 \subsection{Recent Milestones}
 ILC related R\&D in the US has been largely unfunded and small efforts are being kept alive. The \KPIX R\&D is such an example of necessary work for \SID.
 In the last three years, the R\&D for \KPIX Silicon Tracker has been used to design and build a large-area silicon-strip 
@@ -63,7 +55,6 @@ telescope -- called \LYCORIS -- for the \DIITBF~\cite{desytb2018} as part of the
 \LYCORIS did require both the coverage of a large area (10 $\times$ \SI{10}{\centi\meter} area as well be very compact in order to fit
 between the PCMAG Solenoid and the field cage of a large-volume tracking device like a TPC. \LYCORIS consists of two arms of three modules each. The modules used by \LYCORIS are 
 the same as envisaged for the \SID Tracker.
-
 \begin{figure}[htbp]
 \includegraphics[width=0.49\textwidth]{Tracker/KPIX/KPIX_Calib_DAC_c0_k0_b0_r0.pdf}
 \includegraphics[width=0.49\textwidth]{Tracker/KPIX/KPIX_Gaussian_charge_corr_k0_b0.pdf}
@@ -82,7 +73,6 @@ Each module and \KPIX needs to be calibrated using the builtin calibration circu
 common-mode noise.  The calibration results for one of the \KPIX ASICS on a module are demonstrating the very good  linearity of the 
 \KPIX gain are shown in  Figure~\ref{fig:SiliconTracking:KPIX:Calibration}. The noise of a \KPIX after removing both the pedestals and the common-mode noise 
 is shown in Figure~\ref{fig:SiliconTracking:KPIX:Calibration} showing a nice Gaussian behavior as expected.
-
 \begin{figure}[htbp]
 \includegraphics[width=0.45\textwidth]{Tracker/KPIX/KPIX_wirebonding.jpg}
 \includegraphics[width=0.45\textwidth]{Tracker/KPIX/TB201902_tracker_Ecal_2.jpg}
@@ -90,12 +80,10 @@ is shown in Figure~\ref{fig:SiliconTracking:KPIX:Calibration} showing a nice Gau
 \label{fig:SiliconTracking:KPIX:Assembly}
 \end{figure}
 
-
 The \LYCORIS telescope has then been successfully assembled and and operated at DESY and several test beam campaigns were conducted at the \DIITBF (see Figure~\ref{fig:SiliconTracking:KPIX:Assembly}). 
 In one of the tests, both \SID tracker and \SID ECAL sensors were running together using a common DAQ system, demonstrating an \SID mini-slice" test for the first time. 
-A heat map of the measured charge versus the silicon-strip number is shown in Figure~\label{fig:SiliconTracking:KPIX:Results}, clearly showing a 1D profile of the beam spot. 
-A full reconstruction including alignment, track finding and reconstruction has been performed. The reconstructed charge on-track is shown in Figure~\label{fig:SiliconTracking:KPIX:Results}. 
-
+A heat map of the measured charge versus the silicon-strip number is shown in Figure~\ref{fig:SiliconTracking:KPIX:Results}, clearly showing a 1D profile of the beam spot. 
+A full reconstruction including alignment, track finding and reconstruction has been performed. The reconstructed charge on-track is shown in Figure~\ref{fig:SiliconTracking:KPIX:Results}. 
 \begin{figure}[htbp]
 \includegraphics[height=5.5cm]{Tracker/KPIX/KPIX_heatmap_hitsOnTrack.pdf}
 \includegraphics[height=5.5cm]{Tracker/KPIX/KPIX_signal_Landau_Run897.png}
@@ -104,11 +92,9 @@ one of the \LYCORIS modules after full reconstruction (right)}
 \label{fig:SiliconTracking:KPIX:Results}
 \end{figure}
 
-
 The key points demonstrated by \LYCORIS include operating a system of six modules with twelve \KPIX together, 
 a hit resolution of about \SI{7}{\micro\meter} even if only every second strip is read out and the 
 validation of the power-pulsing design with a small system. Additionally, a mini-slice test of running \SiD Tracker and \SID ECAL has been performed as well. 
-
 
 \subsection{Engineering Challenges}
 At this time, \KPIX is seen as the baseline readout system for both the \SID tracker and electromagnetic calorimeter. 
@@ -130,12 +116,11 @@ simulations using the latest beam background estimates. The conclusions are, tha
 the end-caps a move to eight or more buffers is beneficial. A possible new architecture for \KPIX is in 
 the early stages of evaluation.
 
-
 \subsection{Future Plans}
 \LYCORIS is now going to be used at the \DIITBF and is made available to all users. This will yield essential long-term operational experience and 
 advance the experience with these hybrid-less modules.  
 
-For \KPIX a new architecture with little (or no) deadtime will be evaluated. A decision will be made to develop this new architecture or incrementally 
+For \KPIX a new architecture with little (or no) dead time will be evaluated. A decision will be made to develop this new architecture or incrementally 
 improve the existing design. At the same time, \SID will discuss, whether moving to a fully monolithic tracker sensor is beneficial given the past technological 
 developments and the timescales involved.
 	
@@ -143,7 +128,6 @@ Assuming positive developments with Japan are announced soon, we expect the fina
 an important effect of the withdrawal of support is the slow decay of expertise, with many collaborators having to work on other projects. We expect, that 
 a positive statement will lead to resurgence of interest in this technology.
 
-	
 \subsection{References}
 
 \begin{itemize}
@@ -151,5 +135,5 @@ a positive statement will lead to resurgence of interest in this technology.
 \item \fullcite{Kraemer:2018qzh}
 \item \fullcite{Kraemer:2019xku}
 \item \fullcite{Wu:2020jdk}
-\item \fullcite{Kraemer2020_jinst}
+% \item \fullcite{Kraemer2020_jinst}
 \end{itemize}
