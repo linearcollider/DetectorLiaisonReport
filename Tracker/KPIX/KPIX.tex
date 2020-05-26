@@ -25,7 +25,7 @@ The sensors have a size of approximately 10 $\times$ 10 cm$^2$, a strip pitch of
 The end-caps utilizes two modules back-to-back for small angle stereo measurements. 
 Each sensor is read out by two \KPIX ASICS and connected to the DAQ and the power-supply system using a small Kapton-flex cable. This hybrid-less design 
 further reduces the material budget leading two a very light-weight tracking system. A drawing of a Tracker module is shown in 
-Figure~\ref{fig:SiliconTrackin:KPiX:module}.
+Figure~\ref{fig:SiliconTracking:KPIX:module}.
 
 
 \begin{figure}
@@ -33,7 +33,7 @@ Figure~\ref{fig:SiliconTrackin:KPiX:module}.
 \includegraphics[width=0.49\textwidth]{Tracker/KPIX/Tracker_Module_SiD_Photo.jpg}
 \caption{This \SID Tracker Module as foreseen for the baseline \SID Tracker\cite{Behnke:2013lya} with the two \KPIX ASICS and the Kapton-Flex cable 
 and a first prototype module fully completely assembled at DESY}
-\label{fig:SiliconTrackin:KPiX:module}
+\label{fig:SiliconTracking:KPIX:module}
 \end{figure}
 
 The \KPIX ASIC~\cite{6551433}is a 1024 channel ``System on a Chip'' intended for bump bonding 
@@ -68,13 +68,23 @@ using Au pads for the \KPIX bump-bonds and with a thicker oxide-layer. This was 
 wire-bonded to the Kapton-flex cable, which was unexpected. It was then discovered, that the sensor oxide layer was not strong enough 
 to allow wire bonding without damaging the sensor itself.
 
+\begin{figure}
+\includegraphics[width=0.49\textwidth]{Tracker/KPIX/KPIX_Calib_DAC_c0_k0_b0_r0.pdf}
+\includegraphics[width=0.49\textwidth]{Tracker/KPIX/KPIX_Gaussian_charge_corr_k0_b0.pdf}
+\caption{The Calibration of \LYCORIS using the built-in calibration circuity of \KPIX, demonstrating the very nice linearity of the \KPIX gain (left). The \KPIX noise after the 
+successful pedestal subtraction and the removal of the common-mode noise}
+\label{fig:SiliconTracking:KPIX:Calibration}
+\end{figure}
+
+
 These changes have proven successful and these sensors were successfully bump-bonded to two \KPIX ASICS and wire-bonded to their Kapton-flex pigtails 
-(See Figure~\ref{fig:SiliconTrackin:KPiX:module}. Altogether twenty modules haven been successfully assembled and tested. 
+(See Figure~\ref{fig:SiliconTracking:KPIX:module}. Altogether twenty modules haven been successfully assembled and tested. 
+Each module and \KPIX needs to be calibrated using the builtin calibration circuitry and dedicated noise runs to determine the pedestals and the 
+common-mode noise.  The calibration results for one of the \KPIX ASICS on a module  showing the nice linearity of the 
+\KPIX gain and the noise of a \KPIX after removing the pedestals and the common-mode noise are shown in Figure~\ref{fig:SiliconTracking:KPIX:Calibration},
 The \LYCORIS telescope has then been successfully assembled and operated at DESY. 
 
 
-
-some plots here ...
 
 The key points demonstrated by \LYCORIS include operating a system of six modules with twelve \KPIX together, 
 a hit resolution of about \SI{7}{\micro\meter} even if only every second strip is read out and the 
