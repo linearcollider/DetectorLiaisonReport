@@ -48,8 +48,8 @@ sub minimum ionizing particle (MIP) (in \SI{320}{\micro\meter} silicon) to more
 than 2000 MIP. \KPIX also has a calibration system for each channel, servos for 
 leakage compensation, ``DC'' reset for asynchronous operation for testing with 
 cosmic rays, and polarity inversion for use with GEMs and similar detectors. The 
-noise floor is about \SI{0.15}{fC} ($\simeq$ 1000 electrons), and the maximum 
-signal is \SI{10}{pC} (utilizing the dynamic range switching). The full dynamic 
+noise floor is about \SI{0.15}{\femto\coulomb} ($\simeq$ 1000 electrons), and the maximum 
+signal is \SI{10}{\pico\coulomb} (utilizing the dynamic range switching). The full dynamic 
 range corresponds to 17 bits. \KPIX was manufactured using a \SI{250}{\nano\meter} process at TSMC.
 In addition to its use in the \SID tracking system  \KPIX is also the proposed readout ASIC  for the \SID Silicon-
 tungsten sampling electromagnetic calorimeter (see Section~\ref{sec:Calorimeter:SiliconTungstenSiD}).
@@ -65,7 +65,7 @@ between the PCMAG Solenoid and the field cage of a large-volume tracking device 
 
 Based on the experiences with the first set of sensors, the second generation of sensors was produced by Hamamatsu 
 using Au pads for the \KPIX bump-bonds and with a thicker oxide-layer. This was necessary, because the first generation Tracker sensor could not be 
-wire-bonded to its (very thin) cable, which was unexpected. It was discovered, that the sensor oxide layer was not strong enough 
+wire-bonded to the Kapton-flex cable, which was unexpected. It was then discovered, that the sensor oxide layer was not strong enough 
 to allow wire bonding without damaging the sensor itself.
 
 These changes have proven successful and these sensors were successfully bump-bonded to two \KPIX ASICS and wire-bonded to their Kapton-flex pigtails 
@@ -77,7 +77,7 @@ The \LYCORIS telescope has then been successfully assembled and operated at DESY
 some plots here ...
 
 The key points demonstrated by \LYCORIS include operating a system of six modules with twelve \KPIX together, 
-a hit resolution of about \SI{7}{\micro\meter} even if only second strip is read out and the 
+a hit resolution of about \SI{7}{\micro\meter} even if only every second strip is read out and the 
 validation of the power-pulsing design with a small system. 
 
 
@@ -88,13 +88,13 @@ At this time, \KPIX is seen as the baseline readout system for both the \SID tra
 The \LYCORIS telescope has demonstrated that the hybrid-less approach works well, the issues both with wire-bonding and 
 bump-boding have been addressed and the modules can be made with a high yield - albeit this is based on small statistics.
 In terms of the \SID tracker the next steps involve all the system issues of large-area tracker, e.g. cooling, services and mechanical stability. 
-The alignment of such a system also needs further studied and the potential of FSI-based alignment systems need to be shown. 
+The alignment of such a system also needs further studied and the potential of FSI-based alignment systems needs to be shown. 
 
 There remain however some noise issues with the current \KPIX design, particular in the so-called high-gain mode, 
 which is important for the tracker. This is currently under detailed study and the results will inform a possible 
-next-generation \KPIX. Another concern is that the current design of \KPIX has dead time after a pixel 
-has accepted a trigger. Only the triggered pixel is affected; all the other 
-pixels are available for signals. This dead time is different from the usual 
+next-generation \KPIX. Another concern is that the current design of \KPIX has some dead time, if it is operated in the self-trigger mode. 
+After a pixel has accepted a trigger it remains dead for a short period, which only affects the triggered pixel; all the other 
+pixels are available for further signals. This dead time is different from the usual 
 notion of data acquisition dead time where the entire detector is unavailable, 
 but the correction to the luminosity integral is easy. Finally, the buffer 
 requirement (four in the current version of \KPIX) has being re-evaluated in \SID  
