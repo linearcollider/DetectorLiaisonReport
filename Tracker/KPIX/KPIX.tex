@@ -70,25 +70,25 @@ is shown in Figure~\ref{fig:SiliconTracking:KPIX:Calibration} showing a nice Gau
 \begin{figure}[htbp]
 \includegraphics[width=0.45\textwidth]{Tracker/KPIX/KPIX_wirebonding.jpg}
 \includegraphics[width=0.45\textwidth]{Tracker/KPIX/TB201902_tracker_Ecal_2.jpg}
-\caption{The successfully wire-bonded Kapton-Flex cable attached to the sensor (left) and the two \LYCORIS cassettes being tested together with a \SID ECAL sensor at the \DIITBF using the same DAQ (right)}
+\caption{The successfully wire-bonded Kapton-Flex cable attached to the sensor (left) and the two \LYCORIS cassettes being tested together with two \SID ECAL sensors at the \DIITBF using the same DAQ (right)}
 \label{fig:SiliconTracking:KPIX:Assembly}
 \end{figure}
 
 The \LYCORIS telescope has then been successfully assembled and and operated at DESY and several test beam campaigns were conducted at the \DIITBF (see Figure~\ref{fig:SiliconTracking:KPIX:Assembly}). 
-In one of the tests, both \SID tracker and \SID ECAL sensors were running together using a common DAQ system, demonstrating an \SID mini-slice" test for the first time. 
-A heat map of the measured charge versus the silicon-strip number is shown in Figure~\ref{fig:SiliconTracking:KPIX:Results}, clearly showing a 1D profile of the beam spot. 
+In one of the tests, both \SID tracker and \SID ECAL sensors were running together using a common DAQ system, demonstrating an \SID ``mini-slice'' test for the first time. 
+A heat map of the reconstructed tracks versus the silicon-strip number is shown in Figure~\ref{fig:SiliconTracking:KPIX:Results}, clearly showing a 1D profile of the beam spot. 
 A full reconstruction including alignment, track finding and reconstruction has been performed. The reconstructed charge on-track is shown in Figure~\ref{fig:SiliconTracking:KPIX:Results}. 
 \begin{figure}[htbp]
 \includegraphics[height=5.5cm]{Tracker/KPIX/KPIX_heatmap_hitsOnTrack.pdf}
 \includegraphics[height=5.5cm]{Tracker/KPIX/KPIX_signal_Landau_Run897.png}
-\caption{A 1D heat map of measured charge versus channel number on a \LYCORIS module being exposed to the electron beam at the \DIITBF (left) and the hit-on-track charge distribution in 
+\caption{A 1D heat map of the reconstructed tracks versus the silicon-strip number on a \LYCORIS module being exposed to the electron beam at the \DIITBF (left) and the hit-on-track charge distribution in 
 one of the \LYCORIS modules after full reconstruction (right)}
 \label{fig:SiliconTracking:KPIX:Results}
 \end{figure}
 
 The key points demonstrated by \LYCORIS include operating a system of six modules with twelve \KPIX together, 
 a hit resolution of about \SI{7}{\micro\meter} even if only every second strip is read out and the 
-validation of the power-pulsing design with a small system. Additionally, a mini-slice test of running \SID Tracker and \SID ECAL has been performed as well. 
+validation of the power-pulsing design with a small system. Additionally, a ``mini-slice'' test of running \SID Tracker and \SID ECAL has been performed as well. 
 
 \subsection{Engineering Challenges}
 At this time, \KPIX is seen as the baseline readout system for both the \SID tracker and electromagnetic calorimeter. 
@@ -96,7 +96,8 @@ At this time, \KPIX is seen as the baseline readout system for both the \SID tra
 The \LYCORIS telescope has demonstrated that the hybrid-less approach works well, the issues both with wire-bonding and 
 bump-boding have been addressed and the modules can be made with a high yield - albeit this is based on small statistics.
 In terms of the \SID tracker the next steps involve all the system issues of large-area tracker, e.g. cooling, services and mechanical stability. 
-The alignment of such a system also needs further studied and the potential of FSI-based alignment systems needs to be shown. 
+The alignment of such a system also needs further studied and the potential of Frequency-Scanning Interferometry(FSI)-based alignment systems like the one from ATLAS~\cite{ Coe:2004vq}
+needs to be shown. 
 
 There remain however some noise issues with the current \KPIX design, particular in the so-called high-gain mode, 
 which is important for the tracker. This is currently under detailed study and the results will inform a possible 
@@ -129,5 +130,4 @@ a positive statement will lead to resurgence of interest in this technology.
 \item \fullcite{Kraemer:2018qzh}
 \item \fullcite{Kraemer:2019xku}
 \item \fullcite{Wu:2020jdk}
-% \item \fullcite{Kraemer2020_jinst}
 \end{itemize}
