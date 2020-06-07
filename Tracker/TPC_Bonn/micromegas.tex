@@ -1,17 +1,18 @@
 \section{Resistive Micromegas}
 \label{chap:TPC_sec:micromegas}
-Most recent update: 2016-03-28\\
+Most recent update: 2020-05-24\\
 Contact person: Paul Colas (email: paul.colas@cea.fr)\\
 
 \subsection{Introduction}
 First Micromegas prototypes were built with a micro-mesh stretched on a frame, and kept on top of
-a segmented anode at a fixed distance of \SI{50}{\micro m}. The gap is defined by spacers manufactured
+a segmented anode at a fixed distance of \SI{50}{\micro \meter}. The gap is defined by spacers manufactured
 by photo-lithographic techniques. Early tests confirmed that, due to ``hodoscope effect'' a resolution
-down to \SI{100}{\micro m} could not be reached \cite{Arogancia:2007pt}. This triggered studies with charge spreading
+down to \SI{100}{\micro \meter} could not be reached \cite{Arogancia:2007pt}. This triggered studies with charge spreading
 developed at Carleton University~\cite{Dixit:2003qg}.
 The first resistive material was an AlSi CERMET deposited on a Mylar foil and glued at
 \SI{90}{\degreeCelsius} with layer of melting polymer~\cite{2007NIMPA.581..254D}. Later on, a more robust resistive material was
-used: the Dupont-de-Nemours Carbon-loaded Kapton. Novel way to manufacture the Micromegas detector
+used: the Dupont-de-Nemours Carbon-loaded Kapton.Since 2015, Thin layers of DLC (Diamond-Like Carbon) deposited on Kapton are used as a resistive material. 
+Novel way to manufacture the Micromegas detector
 were perfected by the Saclay group in partnership with CERN.
 
 
@@ -29,7 +30,7 @@ through the mesh. This makes a robust and dust-proof detector, with only \SI{2}
 
 Data taken in this 1-module configuration allowed several resistive coatings to be tested. Resistive pastes were discarded, as
 their electrical properties were not uniform enough and lead to distortions on the hit position. Carbon-loaded Kapton gave
-very good results, with a resolution down to \SI{70}{\micro m} at zero drift distance.
+very good results, with a resolution down to \SI{70}{\micro \meter} at zero drift distance.
 
 Starting in 2011, a completely new integration of the electronics has been carried out to allow the simultaneous operation
 of 7 modules. Naked chips were directly wire-bonded on cards. All the protection of the electronics was removed, this functionality
@@ -45,24 +46,28 @@ shifts of almost 1 mm for pad hits located at the extremity of the module.
 
 
 This is
-in agreement with the simulations carried out in the Kolkata group and which can be corrected down to \SI{20}{\micro m}.
+in agreement with the simulations carried out in the Kolkata group and can be corrected down to \SI{20}{\micro \meter}.
 
 In 2014 and 2015, a two-phase \ce{CO2} cooling was provided to the 7 Micromegas modules. The two-phase coolant, under a pressure of \SI{50}{bar}, circulates at a temperature close to the ambient.
-It consists presently of a serpentine running on the back of the modules, in good thermal contact with Aluminum heat sinks, themselves in contact with the chips. The pipe diameter is less than a millimeter, giving a moderate contribution to the material budget. The unit
+It consists presently of a serpentine running on the back of the modules, in good thermal contact with Aluminum heat sinks, themselves in contact with the chips. The inner pipe diameter is less than a millimeter, giving a moderate contribution to the material budget. The unit
 which provides the pressurized \ce{CO2} was funded by KEK and designed by a Nikhef-CERN collaboration.
-An efficient cooling was observed for more than 80 hours continuously.
+An efficient cooling was observed for more than 80 hours continuously in 2015 and for 11 days in 2018. In 2019 and 2020 a new Aluminum cooling plate was prototyped using an additive manufacturing technique, with a 2mm diameter serpentine. 
 
 In 2015, two new modules were inserted on the endplate. The resistive material of the new
 modules was Diamond-Like Carbon obtained by sputtering on a Kapton foil.
 This gives a very robust resistive anode, and the procurement of this material, made in Japan, is more reliable
 than the Dupont Carbon-loaded Kapton. These two modules showed identical performance as the other modules.
 
+In 2018, the endplate was equipped with 4 new modules with a DLC anode. Also, a new scheme was applied for the amplification High Voltage : the anode is set at a positive high voltage, and the Micromegas mesh is set to ground, as the surrounding supports. This allows a better field homogeneity near the module boundary and mitigates the distortions. In addition, this improved the operability of the detector : in case of breakdown of one module, its surface remains at ground, leaving the endplate equipotential. 
+
 \subsection{Engineering Challenges}
-Special care will have to be given to the design of the edge of the modules, to have a uniform potential on the exposed surface of the pad while the boarders of the modules must be grounded.
+
+The requirements on the mechanical precision and flatness of the modules are very demanding to keep the systematics on the distortions below 10-20 microns.  
 
 The adaptation of a gating device at a few cm from the end-plate, or integrated to each module, is a
 difficult engineering challenge if a minimal degradation of the performances is to be obtained.
 
+The procurement of the DLC is for the time being done from a single Japanese producer. More sources are to be found to secure the supply. Collaboration with RD51 and CERN is in progress on this aspect. 
 
 \subsection{Future Plans}
 The time structure of the beams will produce positive ion backflow disks moving slowly (at a few \SI{1}{m/s}) towards the cathode. To experimentally address the question of the effect of these ion disks on the drifting electrons, it is projected to produce such
