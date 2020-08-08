@@ -1,13 +1,13 @@
 \section{Resistive Micromegas}
 \label{chap:TPC_sec:micromegas}
-Most recent update: 2020-05-24\\
+Most recent update: 2020-07-24\\
 Contact person: Paul Colas (email: paul.colas@cea.fr)\\
 
 \subsection{Introduction}
 First Micromegas prototypes were built with a micro-mesh stretched on a frame, and kept on top of
-a segmented anode at a fixed distance of \SI{50}{\micro\meter}. The gap is defined by spacers manufactured
+a segmented anode at a fixed distance of \SI{50}{\micro \meter}. The gap is defined by spacers manufactured
 by photo-lithographic techniques. Early tests confirmed that, due to ``hodoscope effect'' a resolution
-down to \SI{100}{\micro\meter} could not be reached \cite{Arogancia:2007pt}. This triggered studies with charge spreading
+down to \SI{100}{\micro \meter} could not be reached \cite{Arogancia:2007pt}. This triggered studies with charge spreading
 developed at Carleton University~\cite{Dixit:2003qg}.
 The first resistive material was an AlSi CERMET deposited on a Mylar foil and glued at
 \SI{90}{\degreeCelsius} with layer of melting polymer~\cite{2007NIMPA.581..254D}. Later on, a more robust resistive material was
@@ -60,9 +60,33 @@ than the Dupont Carbon-loaded Kapton. These two modules showed identical perform
 
 In 2018, the endplate was equipped with 4 new modules with a DLC anode. Also, a new scheme was applied for the amplification High Voltage : the anode is set at a positive high voltage, and the Micromegas mesh is set to ground, as the surrounding supports. This allows a better field homogeneity near the module boundary and mitigates the distortions. In addition, this improved the operability of the detector : in case of breakdown of one module, its surface remains at ground, leaving the endplate equipotential. 
 
-\subsection{Engineering Challenges}
+The dE/dx resolution is shown in Fig.\ref{fig:fig440} as a function of track length. For the ILC TPC size, it is 5\%.
+\begin{figure}
+\centering
+\includegraphics[width=90mm]{Tracker/TPC_Bonn/plots/fig200116_dEdx_modCanvSize.eps}
+\caption{The dE/dx resolution as a function of the track length for \SI{5}{GeV} electrons. The red line is a power law.}
+\label{fig:fig440}
+\end{figure}
+The point resolution in the r$\phi$ and z coordinates are shown in Fig.\ref{fig:fig421}. The r$\phi$ resolution reaches \SI{65}{\micro\meter} at zero drift distance, and increases as expected with z, due to electron diffusion during the drift.
 
-The requirements on the mechanical precision and flatness of the modules are very demanding to keep the systematics on the distortions below 10-20 microns.  
+\begin{figure}
+    \begin{minipage}{0.5\hsize}
+        \begin{center}
+        \includegraphics[width=76mm]{Tracker/TPC_Bonn/plots/fig200411_resoX_mod3_24Nov_B1_Ed230Vcm_Ed140Vcm}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\hsize}
+        \begin{center}
+        \includegraphics[width=76mm]{Tracker/TPC_Bonn/plots/fig200411_resoZ_mod3_24Nov_B1_Ed230Vcm_Ed140Vcm}
+        \end{center}
+    \end{minipage}
+\caption{The distributions of the spatial and z resolution as a function of the measured drift length, in black for a drift field of \SI{230}{\volt\per\centi\meter} and in blue for \SI{140}{\volt\per\centi\meter} (average over the 24 pad-rows of a module).}
+\label{fig:fig421}
+\end{figure}
+
+
+\subsection{Engineering Challenges}
+The requirements on the mechanical precision and flatness of the modules are very demanding to keep the systematical errors on the sagitta from distortions below 10-20 microns.
 
 The adaptation of a gating device at a few cm from the end-plate, or integrated to each module, is a
 difficult engineering challenge if a minimal degradation of the performances is to be obtained.
