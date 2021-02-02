@@ -117,11 +117,8 @@
 	\HRule\\[1.5cm]
 
 	% FIXME For the final version, make the version number large again and remove "Draft" and the deadline
-	{\Large \color{red}Deadline for submissions: May 15th, 2020}\\
-	{\Large DRAFT}\\
-    % \textsc{\Large Version 2020.1}\\[0.5cm] % Major heading such as course name
-    \textsc{Version 2020.5}\\[0.5cm] % Major heading such as course name
-
+    \textsc{\Large Final Version}\\[0.5cm] % Major heading such as course name
+	\href{https://doi.org/10.5281/zenodo.3749461}{doi:10.5281/zenodo.3749461}\\[1cm]
 	%------------------------------------------------
 	%	Editors
 	%------------------------------------------------
@@ -149,7 +146,7 @@
 			\begin{flushright}
 				\large
 			University of Oregon \\
-			Center for High Energy Physics \\
+			Institute for Fundamental Science \\
 			Eugene, OR 97403, USA \\
 			jstrube@uoregon.edu
 			\end{flushright}
@@ -177,32 +174,135 @@
 
 \tableofcontents
 \chapter*{Foreword}
-\section*{Linear Collider Detector R\&D Liaison Charge}
-The LC Detector R\&D Liaisons ensure productive communication between the Linear Collider Collaboration (LCC) Physics and Detectors Executive Board and the detector R\&D groups. The liaisons are in contact with all individual detector R\&D groups relevant to linear colliders to keep track of the overall detector R\&D activities conducted or planned for linear colliders and to periodically compile summaries of the efforts.
+\section*{Linear Collider Detector R\&D Liaison Charge, as defined by the Linear Collider
+Collaboration (LCC) Physics and Detector Executive Board Mandate (2014-2020):}
+The LC Detector R\&D Liaisons ensure productive communication between the Linear
+Collider Collaboration (LCC) Physics and Detectors Executive Board and the detector R\&D
+groups. The liaisons are in contact with all individual detector R\&D groups relevant to linear
+colliders to keep track of the overall detector R\&D activities conducted or planned for linear
+colliders and to periodically compile summaries of the efforts. The report is not intended to
+serve as the summary to select between different technologies or advertise the most
+advanced ones, but rather as the general overview of the Linear Colliders Detector R\&D
+landscape.
+
 
 \section*{Introduction}
-Future accelerator facilities are an indispensable step towards precision determination of the Standard Model parameters, constraining potential new physics contributions or, alternatively, precision studies of New Physics, pending a hint of new physics at other experiments. The quest for the discovery of the Higgs boson with the multipurpose ATLAS and CMS detectors at the LHC imposed major detector instrumentation work, and brought most of the technologies to their performance limits. With many fundamental physics questions within experimental reach (e.g., precision studies of the Higgs boson couplings and other new particles discovered at the LHC) at future accelerator facilities, a large R\&D effort is needed to develop new and advanced innovative concepts for radiation detection.
+The physics goals of high-luminosity particle accelerators, from LHC to the High-
+Luminosity LHC (HL-LHC) and to the
+next generation of lepton colliders, have set quite stringent constraints on the future needs at
+the Instrumentation Frontier. Many technologies are reaching their sensitivity limit and new
+approaches need to be developed to overcome the currently irreducible technological
+challenges. The detrimental effects of material budget and power consumption present
+a very serious concern for high-precision silicon vertex and tracking detectors. One of the
+most promising areas is CMOS sensors, which offer low mass and potentially radiation-hard
+technology for future proton--proton and electron--positron colliders, intensity frontier and
+heavy-ion experiments. MPGDs have become a well-established technology in the fertile field
+of gaseous detectors; these will remain the primary choice, whenever large-area
+coverage with low material budget is required. Vacuum tube technology is inherently fast and
+new developments include advances in micro-channel plates for photomultipliers with a
+potential for picosecond-time resolution in large systems. Several novel concepts of
+picosecond-timing detectors will have numerous powerful applications in particle
+identification, pile-up rejection and event reconstruction, and serve numerous scientific goals.
+The story of modern calorimetry is a textbook example of physics research driving the
+development of an experimental method. Silicon photomultipliers have seen a rapid progress
+in the last decade, becoming the standard solution for scintillator-based devices. The
+integration of advanced electronics and data transmission functionalities plays an
+increasingly important role and needs to be addressed. Future experimental projects also
+face a large number of diverse engineering challenges, in the areas of system integration,
+power distribution, cooling, mechanical support structures, and production techniques.
+Bringing the modern algorithmic advances from the field of machine learning from offline
+applications to online operations and trigger systems is another major challenge. The
+timescales spanned by future projects in particle physics, ranging from few years to many
+decades, constitute a challenge in itself, in addition to the complexity and diversity of the
+required accelerator and detector R\&D.
 
-The physics potential of future accelerators like the ILC or CLIC represents a tremendous challenge for the performance of the detectors, which is in most cases orthogonal to the main directions of development focused on the LHC experiments. Rather than emphasizing radiation hardness and rate capability, the demands for resolution (granularity) and material budget on one hand, and an acceptable speed and power consumption on the other hand, exceed significantly what is now state-of-the-art. Large tracking detectors aim at a 10-fold precision improvement, while simultaneously pushing the limits of sensor and electronics integration and lightweight precision mechanics. The particle flow approach to calorimetry drives the design of highly compact and granular devices with a channel density more than 2 orders of magnitude above the most finely segmented LHC detectors. Such leaps in performance cannot be achieved by a simple extrapolation of the known, but only by entering new technological territory in detector R\&D. Several new concepts for silicon sensor integration, such as monolithic devices, are being pursued for pixel tracking, new micro-pattern gas amplification techniques are explored for use in time projection chambers, and particle flow calorimetry, relying on several novel technologies, promises to deliver unprecedented jet energy resolution, to quote just some examples.
+The landscape of proposed future accelerator facilities is broad in terms of detector
+technologies to address the physics programs. At the Energy Frontier one can distinguish
+two major drivers for detector R\&D in the short term: detector upgrades toward HL-LHC
+and development of advanced technologies for future $\mathrm{e}^{+}\mathrm{e}^{-}$
+linear colliders (ILC, CLIC). The latter are inherently very accurate physics probes requiring
+integrated concepts with ultimate precision, minimal power consumption and ultra-light
+structures. A key challenge to demonstrate the required detector performance in a realistic
+environment represents a major step forward toward a complete system. Fast and accurate
+physics-driven detector simulations have gained considerable importance with the increase of
+the complexity of novel instrumentation. Concerning synergies and challenges in the design
+and instrumentation developments for the ILC and CLIC (and future circular lepton collider)
+experiments, these are in most cases orthogonal to the main directions of HL-LHC
+experiments. Rather than emphasizing radiation hardness and rate capability, the demands
+for resolution (granularity) and material budget on one hand, and for acceptable speed and
+low power consumption on the other hand, exceed significantly what is the state-of-the-art today.
+Such leaps in performance cannot be achieved by simple extrapolation of the known, but
+only by entering new technological territory in detector R\&D. Several new concepts for silicon
+sensor integration, such as monolithic devices, are being pursued for pixel vertex detectors,
+new micro-pattern gas amplification techniques are under study for tracking and muon systems,
+and the particle-flow approach to calorimetry promises to deliver unprecedented jet energy
+resolution, to name just some examples.
 
-Over the past few decades, extensive generic R\&D studies, applicable to any Linear Collider (LC) detector concept, such as ILD, SiD or CLICdp, have been pursued by the concept-independent R\&D groups and within large collaborations like CALICE, LCTPC and FCAL. This report provides an overview of the past and presently ongoing detector R\&D efforts, including those not directly included in the concept groups today, but which might become relevant in the future. The main purpose if this document is to summarize the LC R\&D achievements worldwide, followed by a discussion of future milestones, in the belief that improved communications will lead to enhancements in the R\&D programs, with a goal to:
+Emerging novel detector technologies are the vital backbone for the success of the
+upcoming large and complex particle physics experiments. They are usually the result of a
+long development cycle encompassing many stages: generic ``blue-sky'' R\&D and R\&D
+activities guided by the needs of future projects, focused R\&D activities for an approved
+experiment, production, industrialization and installation/commissioning, where engineering
+aspects play a very important role. On average, it might take more than 20 years to mature a
+technology from the original idea to a well-established technique suited for implementation
+(e.g.\ the first workshop on the LHC was held in 1984).
+
+Over the past few decades, a large number of groups have pursued extensive generic
+detector R\&D studies, summarized in this report, applicable to any of the proposed Linear
+Collider detector concepts (International Large Detector (ILD), Silicon Detector (SiD) and
+CLIC Detector and Physics (CLICdp). Intentionally, these groups did not yet make very
+specific choices and keep various options for technologies to realise the individual sub-
+detectors. This has the advantage that the technologies can be further developed until
+specific choices have to made, once the project is approved. Furthermore---and as important---this
+keeps a broad community of detector research groups at universities and laboratories
+involved and increases the chance to arrive at the best technically possible detector solution
+when it has to be built. Wherever possible, the R\&D is not pursued with respect to one
+specific concept but in the context of world-wide transversal R\&D collaborations which work
+on technologies rather than detector designs, such as CALICE, LCTPC, and FCAL. Further
+R\&D programs are ongoing, e.g.\ for various monolithic pixel detector technologies
+(CMOS, DEPFET, FPCCD, SoI), for generic aspects of the next generation silicon vertex
+detectors for Linear Colliders and for the development of forward calorimetry. Last, but not
+least, European Commission-funded programs, such as EUDET, AIDA/AIDA2020 and
+ATTRACT play an important role in enabling and supporting generic R\&D activities.
+This report provides an overview of the past and presently ongoing Linear Collider
+detector R\&D studies, including those not directly included in the ILD, SiD and CLICdp
+concept groups today, but which might become relevant in the future. The main purpose of
+the document is to summarize recent progress, followed by the description of future
+milestones, with the following goals:
 \begin{itemize}
-\item “Publicize” the technology and provide an update of recent R\&D efforts since the two important milestone documents for each of the projects: the Conceptual Design Report (CDR) for CLIC and the Detailed Baseline Design (DBD) for the ILC;
-\item Provide a “snapshot” for a particular technology, without information about manpower needs and financial resources to reach project milestones. As most detector R\&D groups are highly independent with their own funds, this document is not intended to serve as a guideline to control or coordinate different R\&D efforts, by indicating explicitly potential overlap areas;
-\item Provide an entry point for new groups in order to help them to learn about the current landscape of the LC R\&D efforts and the areas where they might be interested to contribute.
+	\item ``Publicize'' particular technology and to provide an update of the recent R\&D efforts
+since the Conceptual Design Report (CDR) for CLIC and the Detailed Baseline
+Design (DBD) for the ILC;
+	\item Provide a ``snapshot'' for a given technology, without information on manpower needs
+and financial resources to reach project milestones. As most detector R\&D groups
+are highly independent with their own funds, this document is not intended to serve
+as a guideline to control or coordinate different R\&D efforts, by indicating potential
+overlap areas;
+	\item Provide an entry point for new groups in order to help them learn about the current
+landscape of LC R\&D efforts and the areas where they might be interested to
+contribute.
 \end{itemize}
-Every individual group was requested to submit a written report describing five items of their R\&D program, as an input to the LC Detector R\&D Liaison report. Suggested content of these documents is approximately as follows:
+Therefore, each individual R\&D group within the Linear Collider community was asked to
+submit a short document answering five questions in relation to their R\&D program, as an
+input to the Linear Collider Detector R\&D Liaison report. These are:
 \begin{itemize}
-\item Introduction. Brief overview of the technology (past R\&D efforts with references);
-\item Recent milestones since ILC DBD and CLIC CDR to avoid description of historical data;
-\item Engineering challenges for a given detector technology in order to encourage new groups to contribute to the engineering aspects and not only to the generic R\&D;
-\item Future plans in the years to come and the list of collaborating institutes contributing to the given R\&D technology;
-\item Application of the R\&D outside of ILC with references, if technology is already used.
+	\item Introduction. Brief overview of the technology (past R\&D efforts with references);
+	\item Recent milestones since ILC DBD and CLIC CDR publications;
+	\item Engineering challenges for a given detector technology in order to encourage new
+groups to contribute to the engineering aspects and not only to the generic R\&D;
+	\item Future plans in the years to come and the list of collaborating institutes;
+	\item R\&D spin-offs beyond the ILC, if technology has been already used in other projects.
 \end{itemize}
-The LC Detector R\&D Liaison report serves as an online documentation, updated on a regular basis, and is available to general public and newcomers. The most recent version can be downloaded from: \url{http://linearcollider.web.cern.ch/physics-detectors/working-group-detector-rd-liaison}. This report is not meant to be considered as the summary to select between technologies or advertise the most advanced ones, but rather as a general overview of the landscape of different LC R\&D activities. 
+The LC Detector R\&D Liaison report served as an online documentation, updated on a
+regular basis and available to community and newcomers, during the LCC Physics and
+Detector Executive Board mandate (2014-2020).
 
-The most recent version 2018.3 (released December 17, 2018) was submitted as supplemental information for the LCC input to the European Strategy update: \url{https://ilchome.web.cern.ch/content/ilc-european-strategy-document}. The next update is planned for June 30, 2020.
-
+In particular, version 2018.3 (released December 17, 2018) was used as one of the main
+LCC supporting documents presented to the European Strategy Process:
+\url{https://ilchome.web.cern.ch/content/ilc-european-strategy-document.html}
+This version represents the final release of the Linear Collider Detector R\&D report at the
+end of the LCC mandate. It is intended to serve as one of the inputs to the US Snowmass
+process: \url{https://snowmass21.org/}.
 
 \chapter{Vertex Detectors}
 \input{VertexDetector/Motivation}
